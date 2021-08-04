@@ -37,7 +37,7 @@ const Layout = ({ children, pageTitle }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/'>
+                            <Link to='/blog'>
                                 BLOG.
                             </Link>
                         </li>

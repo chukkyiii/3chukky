@@ -2,7 +2,7 @@ import * as React from 'react'
 import Icon from "../assets/icon.svg"
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
-    nav_links,
+    navLinks,
     logo,
     heading,
     infoBox
@@ -25,7 +25,7 @@ const Layout = ({ children, pageTitle }) => {
             <header>
                 <Icon className={logo} />
                 <nav>
-                    <ul className={nav_links}>
+                    <ul className={navLinks}>
                         <li>
                             <Link to='/'>
                                 README.

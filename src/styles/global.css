@@ -1,0 +1,73 @@
+:root {
+    --foreground-colour: #151515;
+    --background-colour: #fff;
+    --selection-colour: #d2e9f3;
+    --link-colour-default: #2980b9;
+    --link-colour-visited: #8e44ad;
+    --link-colour-active: #27ae60
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-colour: #151515;
+        --background-colour: #242424;
+        --selection-colour: #065273;
+        --link-colour-default: #5cbeff;
+        --link-colour-visited: #ce65fb;
+        --link-colour-active: #47f390
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #e4e5e6;
+    background-color: #242424;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+body {
+    max-height: 100%;
+    color: var(--foreground-colour);
+    background: var(--background-colour);
+    padding: 2em
+}
+
+::selection {
+    background: var(--selection-colour)
+}
+
+p{
+    font-size: 18px;
+}
+
+a {
+    margin-right: 0.3em;
+    color: var(--link-colour-default)
+}
+
+a:visited {
+    color: var(--link-colour-visited)
+}
+
+a:active {
+    color: var(--link-colour-active)
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 1em
+    }
+
+    h1 {
+        font-size: 2.5em
+    }
+
+    h3 {
+        font-size: 2em
+    }
+}

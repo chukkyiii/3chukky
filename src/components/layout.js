@@ -43,9 +43,9 @@ const Layout = ({ children, pageTitle }) => {
                         </li>
                     </ul>
                 </nav>
-                <Link to='/'>
+                <a href='mailto:jgodwin1420@gmail.com'>
                     <button>Contact</button>
-                </Link>
+                </a>
             </header>
             <div className={infoBox}>
                 <h1 className={heading}>{pageTitle}</h1>

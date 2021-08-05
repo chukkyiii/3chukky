@@ -1,0 +1,62 @@
+.all{
+    padding-top: 12.5%;
+}
+
+.heading-one {
+    font-size: 4em;
+    margin: 0 0 .5em
+    
+}
+
+.heading-two,
+.paragraph-style {
+    margin: 0 0 1em
+}
+
+.heading-two {
+    font-weight: 100;
+    font-size: 1.8em;
+    letter-spacing: .02em
+}
+
+.heading-two {
+    text-decoration: none;
+    border-bottom: 1px solid
+}
+
+.heading-three {
+    font-size: 3em
+}
+
+.logo{
+    margin-right: 0.3em;
+}
+
+.heading-one, .logo{
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.heading-one, .logo {
+    fill: #333
+}
+
+.article-style {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 0 3em
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        background: #242424;
+        border-radius: 50%
+    }
+}
+
+code{
+    font-family: monospace;
+    font-size: 15px;
+    color: aqua;
+    margin-right: 0.3em;
+}

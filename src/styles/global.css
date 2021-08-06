@@ -38,6 +38,9 @@ body {
     background: var(--selection-colour)
 }
 
+h1{
+    font-family: 'Roboto', monospace;
+}
 p{
     font-size: 18px;
     font-family: 'Roboto', monospace;

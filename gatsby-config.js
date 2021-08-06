@@ -19,6 +19,18 @@ module.exports = {
         path: `${__dirname}/blog`,
       }
     },
-    `gatsby-plugin-mdx`
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `3chukky`,
+        short_name: `3chukky`,
+        start_url: `/`,
+        background_color: `#242424`,
+        theme_color: `#242424`,
+        display: `standalone`,
+        icon: `src/assets/icon.svg`
+      },
+    },
   ],
 };

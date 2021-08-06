@@ -2,12 +2,15 @@
     padding-top: 12.5%;
 }
 
+.add{
+    color: #298;
+}
+
 .heading-one {
     font-size: 4em;
     margin: 0 0 .5em;
 }
 
-.heading-two,
 .paragraph-style {
     margin: 0 0 1em
 }

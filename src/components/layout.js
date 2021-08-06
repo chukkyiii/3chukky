@@ -32,7 +32,7 @@ const Layout = ({ children, pageTitle }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/'>
+                            <Link to='https://github.com/chukkyiii?tab=repositories'>
                                 PROJECTS.
                             </Link>
                         </li>

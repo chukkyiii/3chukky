@@ -11,10 +11,11 @@ import {
     logo
 } from './content.module.css'
 
-const Content = ({ children }) => {
+const Content = ({ Title }) => {
     const discName = '!{chukky}'
     return (
         <main className={all}>
+            <title>{Title}</title>
             <article className={articleStyle}>
                 <h1 className={headingOne}>
                     <Icon className={logo} />

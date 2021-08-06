@@ -3,8 +3,8 @@
     --background-colour: #fff;
     --selection-colour: #d2e9f3;
     --link-colour-default: #2980b9;
-    --link-colour-visited: #8e44ad;
-    --link-colour-active: #27ae60
+    --link-colour-visited: #f8f8f8;
+    --link-colour-active: #27ae60;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,22 +12,19 @@
         --foreground-colour: #151515;
         --background-colour: #242424;
         --selection-colour: #065273;
-        --link-colour-default: #5cbeff;
-        --link-colour-visited: #ce65fb;
-        --link-colour-active: #47f390
+        --link-colour-default: #2980b9;
+        --link-colour-visited: #e6e6e6;
+        --link-colour-active: #47f390;
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,600;1,400;1,500;1,600&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #e4e5e6;
-    background-color: #242424;
-    font-family: 'Roboto',
-        sans-serif;
+    color: var(--link-colour-visited);
 }
 
 body {
@@ -43,11 +40,14 @@ body {
 
 p{
     font-size: 18px;
+    font-family: 'Roboto', monospace;
 }
 
 a {
     margin-right: 0.3em;
-    color: var(--link-colour-default)
+    color: var(--link-colour-default);
+    text-decoration: none;
+    font-size: 20px;
 }
 
 a:visited {

@@ -3,8 +3,10 @@ import '../styles/global.css'
 import Content from '../components/content'
 
 const IndexPage = () => {
+    let word = Math.random().toString(36).substring(2,7);
+    let yourTitle = word.concat(' Is obviously a word')
     return (
-        <Content>
+        <Content Title={yourTitle}>
         </Content>
     )
 }

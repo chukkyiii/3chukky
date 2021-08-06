@@ -34,3 +34,7 @@ module.exports = {
     },
   ],
 };
+
+
+// Install List 
+// gatsby-plugin-offline [ npm install gatsby-plugin-offline ]

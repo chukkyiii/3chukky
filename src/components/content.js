@@ -11,7 +11,7 @@ import {
     logo
 } from './content.module.css'
 
-const Content = ({ Title }) => {
+const Content = ({ Title, children }) => {
     const discName = '!{chukky}'
     return (
         <main className={all}>
@@ -31,6 +31,7 @@ const Content = ({ Title }) => {
                     <button>Blog</button>
                 </a> 
             </article>
+            {children}
         </main>
     )
 }

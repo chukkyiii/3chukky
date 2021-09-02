@@ -31,6 +31,8 @@ header {
     cursor: pointer;
     margin-right: auto;
 }
+
+/* here is how to do the heading styling  */
 .nav-links{
     list-style: none;
 }

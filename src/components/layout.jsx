@@ -37,11 +37,6 @@ const Layout = ({ children, pageTitle }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/gallery'>
-                                GALLERY
-                            </Link>
-                        </li>
-                        <li>
                             <Link to='/blog'>
                                 BLOG.
                             </Link>

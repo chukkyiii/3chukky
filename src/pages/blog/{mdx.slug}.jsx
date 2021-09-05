@@ -1,16 +1,39 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx' // highlight-line
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from "@mdx-js/react"
 import Layout from '../../components/layout'
 
-const BlogPost = ({ data }) => { // highlight-line
+const blogStyle = {
+  marginTop: "0px",
+  marginRight: "64px",
+  marginBottom: "0px",
+  marginLeft: "64px",
+
+  maxWidth: "680px",
+  minWidth: "0",
+  width: "100%"
+
+  //LS
+}
+
+const BlogPost = ({ data }) => { 
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
-      <MDXRenderer>
-        {data.mdx.body}
-      </MDXRenderer>
+      <div style={blogStyle}>
+        <MDXProvider
+          components={{
+            p: props => <p {...props} style={{ textAlign: "center" }} />,
+            pre: props => <pre {...props} style={{ textAlign: "center"}} />
+          }}
+        >
+          <MDXRenderer >
+            {data.mdx.body}
+          </MDXRenderer>
+        </MDXProvider>
+      </div>
     </Layout>
   )
 }

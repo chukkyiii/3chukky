@@ -7,14 +7,6 @@ const IndexPage = () => {
     let yourTitle = word.concat(' Is obviously a word')
     return (
         <Content Title={yourTitle}>
-        {/*           _ ._  _ , _ ._
-                    (_ ' ( `  )_  .__)
-                ( (  (    )   `)  ) _)
-                (__ (_   (_ . _) _) ,__)
-                    `~~`\ ' . /`~~`
-                        ;   ;
-                        /   \
-        _____________/_ __ \_____________  */}
         </Content>
     )
 }

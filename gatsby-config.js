@@ -32,6 +32,9 @@ module.exports = {
         icon: `src/assets/icon.svg`
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`
   ],
 };
 

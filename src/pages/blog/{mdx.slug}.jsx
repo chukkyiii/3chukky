@@ -17,22 +17,29 @@ const blogStyle = {
   //LS
 }
 
+const NP = {
+  justifyContent: "center",
+  display: "flex"
+}
+
 const BlogPost = ({ data }) => { 
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
-      <div style={blogStyle}>
-        <MDXProvider
-          components={{
-            p: props => <p {...props} style={{ textAlign: "center" }} />,
-            pre: props => <pre {...props} style={{ textAlign: "center"}} />
-          }}
-        >
-          <MDXRenderer >
-            {data.mdx.body}
-          </MDXRenderer>
-        </MDXProvider>
+      <div style = {NP}>
+        <div style={blogStyle}>
+          <MDXProvider
+            components={{
+              p: props => <p {...props} style={{ textAlign: "left" }} />,
+              pre: props => <pre {...props} style={{ textAlign: "left" }} />
+            }}
+          >
+            <MDXRenderer >
+              {data.mdx.body}
+            </MDXRenderer>
+          </MDXProvider>
+        </div>
       </div>
     </Layout>
   )

@@ -2,9 +2,16 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 
+const heading = {
+  fontSize: "120px",
+  fontFamily: "'Roboto', monospace",
+  paddingBottom: "20px"
+}
+
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Bløg.">
+      <h1 style={heading}>Bløg.</h1>
       {
         data.allMdx.nodes.map(node => (
           <article key={node.id}>

@@ -1,0 +1,144 @@
+---
+title: "Java for a Newcomer Like Me."
+date: "2021-09-05"
+---
+
+Here is what I have understood so far...
+
+```
+layout 
+variables
+functions
+for loops 
+formats
+
+other stuff...
+```
+
+
+We are going to create a program which shows 10 multiples of n. 
+Going to make use of functions in java just to test my knowledge of java. 
+
+The function needs to be inside a class which has to be the same as
+the file name.I am going to call the file `Loops.java` so the class
+name is going to be called`Loops`
+
+        ```java
+public class Loops {
+    ...
+}
+```
+
+I come from python, so when it came to running code I code 'write it anywhere',
+but when it comes to Java we have to run our program thorugh the main function which
+looks like:
+
+```java
+public static void main(String[] args) {
+    ...
+    System.out.println()
+}
+```
+
+Within the main method we can now write our code, for example an output:
+`System.out.println('hello world') => 'hello world'`
+
+## Let Us Bake!
+
+We want to have our program output multiples of n, n representing a constant of any number 
+so that number does not change through out the program. 
+
+```java
+public static void multiples(int n){
+    ...
+}
+```
+
+This will be our function which will be called in our main function. In order for to list 10 
+multiples of n, we are going to use a for loop. 
+
+### For Loops
+
+Python:
+```python
+for i in range(10):
+    print(i)
+```
+Java:
+```java
+for (initialExpression; testExpression; updateExpression) {
+    // body of the loop
+}
+
+// for example: 
+
+for (int i = 1; i < 10; ++i){
+    System.out.println(i)
+}
+```        
+
+I kinda like the way java looks when writing code despite python being much easier to write with. 
+
+Back on Topic, I want to be able to cycle through each number while multiplying it by n.
+
+```java
+for (int i = 1; i < 11; ++i ){
+    int x = n * i;
+}
+```
+`x` will represent the product of both `i` and`n`.Now we can output`x`.Just to make everything cleaner 
+and easier to understand we can format these varibles within the a string. 
+
+```java
+for (int i = 1; i < 11; ++i ){
+    int x = n * i;
+    System.out.println(String.format("%d x %d = %d", n, i, x));
+}
+```
+
+`%d` representing an interger ? 
+
+*After some research...*
+It means ** Decimal Interger **
+
+You can use these when formating other different data types:
+
+```
+%c - character 
+%d - decimal interger
+
+there are others...
+```
+
+so this is what we have got:
+```java
+public static void multiples(int n){
+    for (int i = 1; i < 11; ++i){
+        int x = n * i;
+        System.out.println(String.format("%d x %d = %d", n, i, x));
+    }
+}
+```
+### Let Start Calling
+In order to call our function to write the name of the function we want to call, this applies to every programming language I have written in. 
+```java
+public static void main(String[] args) {
+    multiples(3);
+}
+```
+
+    ```
+this is the result: 
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30   
+```
+
+There we go we did it! 🎉

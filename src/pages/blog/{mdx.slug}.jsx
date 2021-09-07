@@ -22,7 +22,7 @@ const NP = {
 }
 
 const codeStyle = {
-  display: "block none !important",
+  display: "block none",
   fontSize: "100%",
   lineHeight: "1.5",
   float: "left",
@@ -33,20 +33,22 @@ const codeStyle = {
   paddingLeft: "1.5rem"
 }
 
+const heading = {
+  fontSize: "60px ",
+  fontFamily: "'Roboto', monospace"
+}
 
 const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div style={NP}>
         <div style={blogStyle}>
+          <h1 style={heading}>{data.mdx.frontmatter.title}</h1>
           <p>{data.mdx.frontmatter.date}</p>
           <br />
           <MDXProvider
             components={{
               p: props => <p {...props} style={{ textAlign: "left" }} />,
-              pre: props => <pre {...props}
-                style={codeStyle}
-              />,
               code: props => <code {...props}
                 style={codeStyle}
               />

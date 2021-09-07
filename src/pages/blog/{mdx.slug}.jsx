@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from "@mdx-js/react"
 import Layout from '../../components/layout'
-import { StaticImage } from 'gatsby-plugin-image'
 
 const blogStyle = {
   marginTop: "0px",
@@ -24,10 +23,8 @@ const NP = {
 }
 
 const BlogPost = ({ data }) => { 
-
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <StaticImage src={data.mdx.frontmatter.image} alt={data.mdx.frontmatter.imageAlt}/>
       <p>{data.mdx.frontmatter.date}</p>
       <div style = {NP}>
         <div style={blogStyle}>
@@ -53,8 +50,6 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
-        image
-        imageAlt
       }
       body
     }

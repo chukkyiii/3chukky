@@ -14,7 +14,6 @@ const blogStyle = {
   minWidth: "0",
   width: "100%"
 
-  //LS
 }
 
 const NP = {
@@ -22,16 +21,35 @@ const NP = {
   display: "flex"
 }
 
-const BlogPost = ({ data }) => { 
+const codeStyle = {
+  display: "block none !important",
+  fontSize: "100%",
+  lineHeight: "1.5",
+  float: "left",
+  minWidth: "100%",
+  paddingTop: "0px",
+  paddingRight: "1.5rem",
+  paddingBottom: "0px",
+  paddingLeft: "1.5rem"
+}
+
+
+const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.date}</p>
-      <div style = {NP}>
+      <div style={NP}>
         <div style={blogStyle}>
+          <p>{data.mdx.frontmatter.date}</p>
+          <br />
           <MDXProvider
             components={{
               p: props => <p {...props} style={{ textAlign: "left" }} />,
-              pre: props => <pre {...props} style={{ textAlign: "left" }} />
+              pre: props => <pre {...props}
+                style={codeStyle}
+              />,
+              code: props => <code {...props}
+                style={codeStyle}
+              />
             }}
           >
             <MDXRenderer >

@@ -4,7 +4,6 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
     navLinks,
     logo,
-    heading,
     infoBox
 } from './layout.module.css'
 
@@ -47,9 +46,6 @@ const Layout = ({ children, pageTitle }) => {
                     <button>Contact</button>
                 </a>
             </header>
-            <div className={infoBox}>
-                <h1 className={heading}>{pageTitle}</h1>
-            </div>
             <div className={infoBox}>
                 {children}
             </div>

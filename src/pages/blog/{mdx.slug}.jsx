@@ -27,14 +27,23 @@ const codeStyle = {
   lineHeight: "1.5",
   float: "left",
   minWidth: "100%",
-  paddingTop: "0px",
+  paddingTop: "1.5rem",
   paddingRight: "1.5rem",
-  paddingBottom: "0px",
-  paddingLeft: "1.5rem"
+  paddingBottom: "1.5rem",
+  paddingLeft: "1.5rem",
+  marginBottom: "9px",
+  border: "1px solid #707070",
+  borderRadius: "1px"
 }
 
 const heading = {
   fontSize: "60px ",
+  fontFamily: "'Roboto', monospace"
+}
+
+const headingStyle = {
+  paddingTop: "9px",
+  paddingBottom: "18px",
   fontFamily: "'Roboto', monospace"
 }
 
@@ -48,13 +57,25 @@ const BlogPost = ({ data }) => {
           <br />
           <MDXProvider
             components={{
-              p: props => <p {...props} style={{ textAlign: "left" }} />,
+              h2: props => <h2 {...props}
+                style={headingStyle}
+              />,
+              h3: props => <h3 {...props}
+                style={headingStyle}
+              />,
+              p: props => <p {...props} 
+                style={
+                  { 
+                    textAlign: "left",
+                  }
+                }
+              />,
               code: props => <code {...props}
                 style={codeStyle}
-              />
+              />,
             }}
           >
-            <MDXRenderer >
+            <MDXRenderer>
               {data.mdx.body}
             </MDXRenderer>
           </MDXProvider>

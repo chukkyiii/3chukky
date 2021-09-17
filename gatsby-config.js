@@ -34,7 +34,18 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: ["/", { regex: "^/blog" }],
+        height: 3,
+        prependToBody: false,
+        color: `orange`,
+        footerHeight: 500,
+        headerHeight: 0,
+      },
+    },
   ],
 };
 

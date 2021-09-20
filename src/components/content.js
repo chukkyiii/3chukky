@@ -8,6 +8,7 @@ import {
     headingTwo,
     paragraphStyle,
     articleStyle,
+    blogButton,
     logo,
 } from './content.module.css'
 
@@ -29,7 +30,7 @@ const Content = ({ Title, children }) => {
                     using the <a href='https://flask.palletsprojects.com/en/2.0.x/'>Flask</a>webframework and learning <a href='https://reactjs.org/'>React.</a> You can reach me on discord with <code>{discName}#5111</code>.
                 </p>
                 <a href="/blog" >
-                    <button>Blog</button>
+                    <button className={blogButton}>Blog</button>
                 </a> 
             </article>
             {children}

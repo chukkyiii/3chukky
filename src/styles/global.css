@@ -9,7 +9,7 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,600;1,400;1,500;1,600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -22,19 +22,20 @@ body {
     max-height: 100%;
     color: var(--foreground-colour);
     background: var(--background-colour);
-    padding: 2em
+    padding: 2em;
+    font-family: 'Roboto'
 }
 
 ::selection {
     background: var(--selection-colour)
 }
 
-h1{
+h1 {
     font-family: 'Roboto', monospace;
 }
-p{
+
+p {
     font-size: 18px;
-    font-family: 'Roboto', monospace;
 }
 
 a {
@@ -56,12 +57,7 @@ a:active {
     body {
         padding: 1em
     }
-
-    h1 {
-        font-size: 2.5em
-    }
-
-    h3 {
-        font-size: 2em
-    }
 }
+
+
+

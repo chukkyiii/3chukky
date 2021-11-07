@@ -12,21 +12,19 @@ import {
     logo,
 } from './content.module.css'
 
-
 const Content = ({ Title, children }) => {
     const discName = '!{chukky}'
     return (
         <main className={all}>
             <title>{Title}</title>
-            <article className={articleStyle}>
+            <article className={articleStyle} >
                 <h1 className={headingOne}>
                     <Icon className={logo} />
                     Hi. <br /> My name is Chukky.
                 </h1>
                 <h2 className={headingTwo}>I code, write, and contribute to open source software.</h2>
                 <p className={paragraphStyle}> 
-                    I’m currently brain-storming <span className={highlight}>+</span> building my website! I’m also currently learning gatsby.js and using it for this site.
-                    I’m looking to collaborate on any projects that involve web dev. Currently working on <a href="https://github.com/chukkyiii/ONO">ONO</a>
+                    <span className={highlight}>I’m currently brain-storming!</span> I’m looking to collaborate on any projects. Currently working on <a href="https://github.com/chukkyiii/ONO">ONO</a>
                     using the <a href='https://flask.palletsprojects.com/en/2.0.x/'>Flask</a>webframework and learning <a href='https://reactjs.org/'>React.</a> You can reach me on discord with <code>{discName}#5111</code>.
                 </p>
                 <a href="/blog" >

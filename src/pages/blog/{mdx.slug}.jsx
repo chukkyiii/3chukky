@@ -70,6 +70,11 @@ const BlogPost = ({ data }) => {
                   }
                 }
               />,
+              a: props => <a {...props}
+                style={{
+                  color: "orange"
+                }}
+              />,
               code: props => <code {...props}
                 style={codeStyle}
               />,

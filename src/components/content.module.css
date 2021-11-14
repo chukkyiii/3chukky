@@ -1,5 +1,5 @@
 .all{
-    padding-top: 12.5%;
+    padding-top: 7.5%;
 }
 
 a {
@@ -8,25 +8,21 @@ a {
     font-weight: 400;
 }
 
-.highlight{
+.highlightg{
     color: #298;
 }
 
+.highlighto{
+    color: orange;
+}
 .heading-one {
-    font-size: 4em;
+    font-size: 3.5em;
     margin: 0 0 .5em;
 }
 
 .paragraph-style {
     margin: 0 0 1em
 }
-
-.heading-two {
-    font-weight: 100;
-    font-size: 1.8em;
-    letter-spacing: .02em
-}
-
 /* .heading-two {
     text-decoration: none;
     border-bottom: 1px solid;
@@ -38,8 +34,15 @@ a {
 }
 
 .logo{
-    margin-right: 0.3em;
+    animation-name: bounce-1;
+    animation-timing-function: linear;
 }
+@keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
 
 .heading-one, .logo{
     display: inline-block;

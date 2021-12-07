@@ -12,11 +12,10 @@ import {
     logo,
 } from './content.module.css'
 
-const Content = ({Title, children }) => {
+const Content = ({children}) => {
     const discName = '!{chukky}'
     return (
         <main className={all}>
-            <title>{Title}</title>
             <article className={articleStyle} >
                 <h1 className={headingOne}>
                     CREATION BY <Name classname={logo}/> <br />
@@ -29,9 +28,6 @@ const Content = ({Title, children }) => {
                     and Java. I am also writing blogs on what I am working on, tips and also solutions to problems I may encounter. <br/>
                     You can reach me on discord with <code>{discName}#5111</code>.
                 </p>
-                <a href="/blog" >
-                    <button className={blogButton}>Blog</button>
-                </a> 
             </article>
             {children}
         </main>

@@ -1,3 +1,12 @@
+.all{
+    -webkit-animation: fadein 0.3s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 li, a, button{
     font-family: 'Roboto', monospace;
     font-weight: 500;
@@ -56,4 +65,31 @@ button {
 
 button:hover{
     background-color: rgb(87, 87, 87);
+}
+
+.loading_bar{
+    background-color: orange;
+    height: 6px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-animation: loading 1.2s ease-in-out 0s;
+}
+
+@keyframes loading{
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: calc(100% - 19px);
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: calc(100% - 19px);
+    }
 }

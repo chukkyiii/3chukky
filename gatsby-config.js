@@ -34,6 +34,7 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-glamor`,
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-plugin-page-progress",

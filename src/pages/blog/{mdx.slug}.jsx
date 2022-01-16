@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from "@mdx-js/react"
 import Layout from '../../components/layout'
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+
 
 const blogStyle = {
   marginTop: "0px",
@@ -12,13 +14,17 @@ const blogStyle = {
 
   maxWidth: "680px",
   minWidth: "0",
-  width: "100%"
+  width: "100%",
+  // justifyContent: "center",
+  // display: "flex"
+  // gLITCH
 
 }
 
 const NP = {
   justifyContent: "center",
   display: "flex"
+  
 }
 
 const codeStyle = {
@@ -37,37 +43,39 @@ const codeStyle = {
 }
 
 const heading = {
-  fontSize: "60px ",
-  fontFamily: "'Roboto', monospace"
+  fontSize: "60px",
+  fontFamily: "'Roboto', monospace",
 }
 
 const headingStyle = {
   paddingTop: "9px",
   paddingBottom: "18px",
-  fontFamily: "'Roboto', monospace"
+  fontFamily: "'Roboto', monospace",
 }
 
 const BlogPost = ({ data }) => {
+  const { height, width } = useWindowDimensions();
+  const bool = Boolean(width >= 600)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <div style={NP}>
-        <div style={blogStyle}>
-          <h1 style={heading}>{data.mdx.frontmatter.title}</h1>
+      <div style={bool ? NP : null}>
+        <div style={bool ? blogStyle : null}>
+          <h1 style={bool ? heading : null}>{data.mdx.frontmatter.title}</h1>
           <p>{data.mdx.frontmatter.date}</p>
           <br />
           <MDXProvider
             components={{
               h2: props => <h2 {...props}
-                style={headingStyle}
+                style={bool ? headingStyle : null}
               />,
               h3: props => <h3 {...props}
-                style={headingStyle}
+                style={bool ? headingStyle : null}
               />,
               p: props => <p {...props} 
-                style={
+                style={ bool ? 
                   { 
                     textAlign: "left",
-                  }
+                  } : null
                 }
               />,
               a: props => <a {...props}

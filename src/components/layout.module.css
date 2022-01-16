@@ -93,3 +93,10 @@ button:hover{
         left: calc(100% - 19px);
     }
 }
+
+@media screen and (max-width: 425px) {
+  .nav-links li {
+      display: inline-block;
+      padding: 0px 20px;
+  } 
+}

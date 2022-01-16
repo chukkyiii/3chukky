@@ -32,6 +32,8 @@ const codeStyle = {
   fontSize: "100%",
   lineHeight: "1.5",
   float: "left",
+  overflowX: "auto",
+  width: "100%",
   minWidth: "100%",
   paddingTop: "1.5rem",
   paddingRight: "1.5rem",

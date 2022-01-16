@@ -54,8 +54,9 @@ const headingStyle = {
 }
 
 const BlogPost = ({ data }) => {
-  const { height, width } = useWindowDimensions();
-  const bool = Boolean(width >= 600)
+  const { windowWidth } = useWindowDimensions();
+  const bool = Boolean(windowWidth >= 600)
+  console.log(bool)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div style={bool ? NP : null}>

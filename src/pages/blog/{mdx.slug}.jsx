@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from "@mdx-js/react"
 import Layout from '../../components/layout'
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-
+import Donation from '../../components/donation'
 
 const blogStyle = {
   marginTop: "0px",
@@ -95,6 +95,7 @@ const BlogPost = ({ data }) => {
               {data.mdx.body}
             </MDXRenderer>
           </MDXProvider>
+          <Donation/>
         </div>
       </div>
     </Layout>

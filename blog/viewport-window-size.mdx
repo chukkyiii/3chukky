@@ -1,0 +1,87 @@
+---
+title: "How to get Viewport/Window Height in ReactJS"
+date: "2022-02-06"
+---
+
+Create a file in ../hook directory
+
+```jsx
+import { useState, useEffect } from 'react';
+
+let defaultHeight
+let defaultWidth
+
+if (typeof window !== `undefined`) {
+  defaultHeight = window.innerHeight
+  defaultWidth = window.innerWidth
+}
+
+export default function useWindowDimensions(){
+  const [dimensions, setDimensions] = useState({
+    windowHeight: defaultHeight,
+    windowWidth: defaultWidth,
+  })
+
+  useEffect(() => {
+    const handler = () => setDimensions({
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth,
+    })
+
+    window.addEventListener(`resize`, handler)
+    return () => window.removeEventListener(`resize`, handler)
+  }, [])
+
+  console.log(dimensions)
+  return dimensions
+}
+```
+
+Here is an easy way of using the hook, in your component. 
+
+```jsx
+import * as React from 'react'
+import useWindowDimensions from '../hooks/useWindowDirections';
+
+const Window = () => {
+  const { height, width } = useWindowDimensions();
+
+  return (
+    {
+      width,
+      height
+    }
+  );
+}
+
+export default Window
+```
+
+This way, you are able to get the width and hieght of the webpage for different use cases, 
+my usecase was for mobile devices in order for react to give a different output depending on screen size.
+Here is how I've done that. 
+
+```jsx
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+
+const IndexPage = () => {
+  const { windowWidth } = useWindowDimensions();
+  const bool = Boolean(windowWidth >= 600)
+  return (
+    <>{ bool ? 
+      <Layout>
+      </Layout> : 
+      <div>
+        <div>
+          <p>Your on your phone, stand up and go to your computer...</p>
+        </div>
+      </div>
+      }
+    </>
+  )
+}
+
+export default IndexPage
+```
+
+

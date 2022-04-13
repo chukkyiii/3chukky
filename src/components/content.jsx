@@ -18,15 +18,13 @@ const Content = ({children}) => {
         <main className={all}>
             <article className={articleStyle} >
                 <h1 className={headingOne}>
-                    CREATION BY <Name classname={logo}/> <br />
                     MOSTLY CONTAINING <span className={highlighto}>CODE</span> & <span className={highlighto}>DESIGN</span>
                 </h1>
                 <p className={paragraphStyle}> 
-                    I’m currently working on <a href="https://reacton.tech">reacton.tech</a><span className={highlightg}>+</span> I’m looking to collaborate on any projects. 
-                    I have other projects like <a href="https://github.com/chukkyiii/ONO">ONO</a>using <a href='https://flask.palletsprojects.com/en/2.0.x/'>Flask</a> and   
-                    <a href="https://github.com/chukkyiii/Wault"> Wault</a>a Json Table Generator. I am mostly learning Python, Javascript more specifically <a href='https://reactjs.org/'>React</a>
-                    and Java. I am also writing blogs on what I am working on, tips and also solutions to problems I may encounter. <br/>
-                    You can reach me on discord with <code>{discName}#5111</code>.
+                    I am a Computer Science Student at Newcastle University. I am a passionate self taught developer and designer. 
+                    I have a passion for creating and building things that are useful and beautiful.  I am currently lookig to collaborate
+                    on any projects that I can get my hands on, and I am always open to discussing new ideas. You can reach reach me on Discord
+                    with <code>{discName}#5111</code>
                 </p>
             </article>
             {children}

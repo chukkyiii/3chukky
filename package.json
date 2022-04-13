@@ -18,7 +18,7 @@
     "@mdx-js/mdx": "^2.1.1",
     "@mdx-js/react": "^1.6.22",
     "firebase-admin": "^10.0.2",
-    "gatsby": "^2.19.38",
+    "gatsby": "^3.13.0",
     "gatsby-plugin-gatsby-cloud": "^1.0.2",
     "gatsby-plugin-image": "^0.7.2",
     "gatsby-plugin-manifest": "^2.6.1",

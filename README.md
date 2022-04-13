@@ -1,4 +1,4 @@
-
+Lol my site.
 Still deciding which blogs to do!
 
 [My Site](https://www.chukkyiii.tech)

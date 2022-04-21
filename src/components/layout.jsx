@@ -39,16 +39,6 @@ const Layout = ({ children, pageTitle }) => {
                                 return (
                                     <li key={index}>
                                         <Link href={item.path}>
-                                            {/* Input CSS for active Links here 
-                                                <a
-                                                    className={router.pathname === item.path
-                                                        ? active
-                                                        : non_active
-                                                    }
-                                                >
-                                                    {item.title}
-                                                </a>
-                                            */}
                                             {item.title}
                                         </Link>
                                     </li>

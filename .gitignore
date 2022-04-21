@@ -5,3 +5,4 @@ public
 .swp
 .vscode
 draft/*
+package-lock.json

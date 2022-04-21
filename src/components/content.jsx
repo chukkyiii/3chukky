@@ -1,15 +1,11 @@
 import * as React from 'react'
-import Name from '../assets/name.svg'
-
+import { Link } from 'gatsby'
 import {
     all,
-    highlightg,
     highlighto,
     headingOne,
     paragraphStyle,
     articleStyle,
-    blogButton,
-    logo,
 } from './content.module.css'
 
 const Content = ({children}) => {
@@ -21,11 +17,13 @@ const Content = ({children}) => {
                     MOSTLY CONTAINING <span className={highlighto}>CODE</span> & <span className={highlighto}>DESIGN</span>
                 </h1>
                 <p className={paragraphStyle}> 
-                    I am a Computer Science Student at Newcastle University. I am a passionate self taught developer and designer. 
-                    I have a passion for creating and building things that are useful and beautiful.  I am currently lookig to collaborate
-                    on any projects that I can get my hands on, and I am always open to discussing new ideas. You can reach reach me on Discord
-                    with <code>{discName}#5111</code>
+                    My name is Jesse, though you may know me by other names. I am a Computer Science Student at Newcastle University 
+                    who is also a self taught developer and designer. I have a passion for creating and building things that are useful and appealing.  
+                    I am currently looking to collaborate on any projects that I can get my hands on, and I am always open to discussing new ideas.
+                    You can reach reach me on Discord with <code>{discName}#5111</code>
                 </p>
+
+                <p>If your curious check my projects, you can check <Link href="/experience"><span className={highlighto}>/experience</span> </Link>or click <span className={highlighto}>Projects</span></p>
             </article>
             {children}
         </main>

@@ -14,7 +14,7 @@ const Content = ({children}) => {
         <main className={all}>
             <article className={articleStyle} >
                 <h1 className={headingOne}>
-                    MOSTLY CONTAINING <span className={highlighto}>CODE</span> & <span className={highlighto}>DESIGN</span>
+                    print("Hello, There!")
                 </h1>
                 <p className={paragraphStyle}> 
                     My name is Jesse, though you may know me by other names. I am a Computer Science Student at Newcastle University 

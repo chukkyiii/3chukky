@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://chukkyiii.tech",
     title: "3chukky",
   },
   plugins: ["gatsby-plugin-gatsby-cloud",
@@ -19,7 +19,34 @@ module.exports = {
         path: `${__dirname}/blog`,
       }
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/images`,
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages`,
+      }
+    },
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -55,25 +55,32 @@ const headingStyle = {
   fontFamily: "'Roboto', monospace",
 }
 
+const imgStyle = {
+  paddingRight: "24px !important",
+  paddingLeft: "24px !important",
+  marginLeft: "83.3333% !important",
+  width: "100%",
+  boxSizing: "border-box",
+  display: "block",
+}
+
 const BlogPost = ({ data }) => {
   const { windowWidth } = useWindowDimensions();
   const bool = Boolean(windowWidth >= 600);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div style={bool ? NP : null}>
-        <div style={bool ? blogStyle : null}>
+        <div style={bool ? heading : null}>
           <h1 style={bool ? heading : null}>{data.mdx.frontmatter.title}</h1>
           <p>{data.mdx.frontmatter.alt}</p>
-          <Img style={
-              {
-                aspectRatio: "auto 1600 / 850",
-                justifyContent: "center",
-                display: "flex"
-              }
-            } 
-            fluid={data.mdx.frontmatter.featuredImage.childImageSharp.fluid} 
-          />
-          <br />
+        </div>
+        <div style={bool ? imgStyle: null}>
+          <Img fluid={data.mdx.frontmatter.featuredImage.childImageSharp.fluid} />
+        </div>
+      </div>
+      <br />
+      <div style={bool ? NP : null}>
+        <div style={bool ? blogStyle : null}>
           <MDXProvider
             components={{
               h2: props => <h2 {...props}

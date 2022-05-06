@@ -9,6 +9,7 @@ const heading = {
 }
 
 const BlogPage = ({ data }) => {
+  
   return (
     <Layout pageTitle="Bløg.">
       <h1 style={heading}>Bløg.</h1>
@@ -37,6 +38,14 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
         }
         id
         slug

@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import Layout from '../../components/layout'
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import Donation from '../../components/donation'
+import Img from "gatsby-image"
 
 const blogStyle = {
   marginTop: "0px",
@@ -13,7 +14,6 @@ const blogStyle = {
   marginLeft: "64px",
 
   maxWidth: "680px",
-  minWidth: "0",
   width: "100%",
   // justifyContent: "center",
   // display: "flex"
@@ -57,14 +57,22 @@ const headingStyle = {
 
 const BlogPost = ({ data }) => {
   const { windowWidth } = useWindowDimensions();
-  const bool = Boolean(windowWidth >= 600)
-  console.log(bool)
+  const bool = Boolean(windowWidth >= 600);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div style={bool ? NP : null}>
         <div style={bool ? blogStyle : null}>
           <h1 style={bool ? heading : null}>{data.mdx.frontmatter.title}</h1>
-          <p>{data.mdx.frontmatter.date}</p>
+          <p>{data.mdx.frontmatter.alt}</p>
+          <Img style={
+              {
+                aspectRatio: "auto 1600 / 850",
+                justifyContent: "center",
+                display: "flex"
+              }
+            } 
+            fluid={data.mdx.frontmatter.featuredImage.childImageSharp.fluid} 
+          />
           <br />
           <MDXProvider
             components={{
@@ -108,6 +116,14 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 1700) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        alt
       }
       body
     }

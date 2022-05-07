@@ -1,54 +1,39 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Layout from "../components/layout"
 
-// styles
 const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  backgroundColor: "#242424",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  position: "absolute",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)",
+  padding: "10px",
+  display: "flex",
+  textAlign: "center",
+  // margin: "64px -109px -76px -3px"
 }
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
+const headingOne = {
+  margin: "40px 0 10px",
+  fontSize: "36px",
+  lineHeight: "110%",
+  fontWeight: "700",
+  textTransform: "none"
 }
 
 // markup
+// 404 page
+
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout pageTitle="Not Found" >
+      <div style={pageStyles}>
+        <h1>404</h1>
+        <h2>That page doesn't exist</h2>
+        <div>It might have been moved.</div>
+        <Link to="/">Go Home</Link>
+      </div>
+    </Layout>
   )
 }
 

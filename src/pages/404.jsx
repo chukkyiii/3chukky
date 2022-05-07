@@ -8,7 +8,6 @@ const pageStyles = {
   top: "50%",
   transform: "translate(-50%, -50%)",
   padding: "10px",
-  display: "flex",
   textAlign: "center",
   // margin: "64px -109px -76px -3px"
 }
